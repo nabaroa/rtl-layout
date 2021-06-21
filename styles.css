@@ -1,5 +1,6 @@
 :root {
   --space: 16px;
+  --color: #c44f7a;
 }
 
 /* Elements */
@@ -20,7 +21,7 @@ header {
   padding: var(--space);
   background: white;
   border-bottom: 1px solid #ccc;
-  color: #c44f7a;
+  color: var(--color);
 }
 
 button {
@@ -49,6 +50,10 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 40px;
+}
+
+a {
+  color: var(--color);
 }
 
 @media (max-width: 758px) {
@@ -158,6 +163,22 @@ footer {
 
 .menu__item {
   color: #c44f7a;
+}
+
+.try-me {
+  position: relative;
+}
+
+@media (min-width: 758px) {
+  html[dir="ltr"] .try-me:before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -150px;
+    background: url(assets/try-me.png);
+    width: 132px;
+    height: 117px;
+  }
 }
 
 /* Utilities */

@@ -19,6 +19,8 @@ header {
   top: 0;
   padding: var(--space);
   background: white;
+  border-bottom: 1px solid #ccc;
+  color: #c44f7a;
 }
 
 button {
@@ -146,6 +148,10 @@ footer {
   list-style: none;
   margin: var(--space) 0;
   padding: 0;
+}
+
+.menu__item {
+  color: #c44f7a;
 }
 
 /* Utilities */

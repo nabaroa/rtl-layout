@@ -51,6 +51,12 @@ footer {
   padding: 40px;
 }
 
+@media (max-width: 758px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

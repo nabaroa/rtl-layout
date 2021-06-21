@@ -9,19 +9,21 @@
 </head>
 
 <body>
-  <header class="container">
-    <h1>
-      Optimise your layout for RTL languages
-    </h1>
-    <button id="ltrButton">LTR</button>
-    <button id="rtlButton">RTL</button>
-    <nav>
-      <ul class="menu">
-        <li><a class="menu__item" href="#section-alignment">Alignment</a></li>
-        <li><a class="menu__item" href="#section-margins">Spacing</a></li>
-        <li><a class="menu__item" href="#section-columns">Columns</a></li>
-      </ul>
-    </nav>
+  <header>
+    <div class="container">
+      <h1>
+        Optimise your layout for RTL languages
+      </h1>
+      <button id="ltrButton">LTR</button>
+      <button id="rtlButton">RTL</button>
+      <nav>
+        <ul class="menu">
+          <li><a class="menu__item" href="#section-alignment">Alignment</a></li>
+          <li><a class="menu__item" href="#section-margins">Spacing</a></li>
+          <li><a class="menu__item" href="#section-columns">Columns</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="container">
     <section class="section">
@@ -53,7 +55,8 @@
       </div>
       <h4>Well, I can't refactor the layout right now:</h4>
       <p>Here an example of how to modify your directional classes. Take into account that what is <strong>left</strong>
-        must be converted to <strong>right</strong> and vice versa in RTL direction so we can create conditional classes using the
+        must be converted to <strong>right</strong> and vice versa in RTL direction so we can create conditional classes
+        using the
         cascade:</p>
       <pre class="grid-2--md"><code>
 html[dir="rtl"] {

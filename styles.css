@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: Averta;
+  margin: 0;
   line-height: 1.5;
 }
 
@@ -18,6 +19,10 @@ header {
   top: 0;
   padding: var(--space);
   background: white;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 button {
@@ -100,8 +105,10 @@ footer {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
+@media (min-width: 758px) {
+  .grid-2--md {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .d-inline {

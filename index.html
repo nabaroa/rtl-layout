@@ -33,7 +33,7 @@
       <p> The browser will show a proper layout if you follow the best practices for directional layout building. Try
         the buttons on header to test.</p>
       <h3>Best practices</h3>
-      <div class="grid-2">
+      <div class="grid-2--md gap">
         <div>
           <h4>Don't</h4>
           <ul>
@@ -55,7 +55,7 @@
       <p>Here an example of how to modify your directional classes. Take into account that what is <strong>left</strong>
         must be converted to <strong>right</strong> and vice versa in RTL direction so we can create conditional classes using the
         cascade:</p>
-      <pre class="grid-2"><code>
+      <pre class="grid-2--md"><code>
 html[dir="rtl"] {
   .text-align-left {
     text-align: right;
@@ -75,7 +75,7 @@ html[dir="rtl"] {
     <h2>Issue points</h2>
     <section class="section" id="section-alignment">
       <h3>Alignment</h3>
-      <div class="grid-2 gap">
+      <div class="grid-2--md gap">
         <div class="">
           <h4>Tradicional alignment</h4>
           <p>text-align: left;</p>
@@ -97,7 +97,7 @@ html[dir="rtl"] {
       </div>
     </section>
     <h3 id="section-margins">Margin/Padding rigth / left for horizontal spacing</h3>
-    <section class="section grid-2 gap">
+    <section class="section grid-2--md gap">
       <div class="">
         <h4>Margin right/left</h4>
         <p>margin-right: 40px</p>
@@ -116,7 +116,7 @@ html[dir="rtl"] {
       </div>
     </section>
     <h3 id="section-paddings">Padding rigth / left</h3>
-    <section class="section grid-2 gap">
+    <section class="section grid-2--md gap">
       <div class="">
         <h4>padding right/left</h4>
         <p>padding-right: 40px</p>
@@ -133,7 +133,7 @@ html[dir="rtl"] {
       </div>
     </section>
     <h3 id="section-columns">Column system</h3>
-    <section class="section grid-2 gap">
+    <section class="section grid-2--md gap">
       <div class="">
         <h4>Bootstrap cols</h4>
         <p class="">col-6 col-6. Based in floats</p>

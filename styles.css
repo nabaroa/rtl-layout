@@ -1,0 +1,178 @@
+:root {
+  --space: 16px;
+}
+
+/* Elements */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Averta;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: var(--space);
+  background: white;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px;
+  min-width: 100px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: inside;
+}
+
+pre {
+  font-family: monospace;
+  background: #f2f2f2;
+  padding: 0 var(--space);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Averta;
+  src: url(assets/TW-Averta-Regular.ttf);
+}
+
+/* Layout */
+
+.section {
+  padding-bottom: 40px;
+}
+
+:target[id^="section"] {
+  padding-top: 200px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: var(--space);
+}
+
+[class^="grid"],
+[class*=" grid"] {
+  display: grid;
+  /* gap: var(--space); */
+}
+
+[class^="grid"],
+[class*=" grid"] > * {
+  /* padding: var(--space); */
+}
+
+.gap {
+  gap: var(--space);
+}
+
+.gap-40 {
+  column-gap: 40px;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.d-inline {
+  display: inline;
+}
+
+.col-6 {
+  float: left;
+}
+
+.col-6.box {
+  width: 50%;
+}
+
+/* Theme */
+
+.box {
+  width: 100%;
+  margin: var(--space) 0;
+  padding: var(--space);
+  border: 1px dashed grey;
+}
+
+.column {
+  padding: var(--space);
+}
+
+.positive {
+  background: #bef5d3;
+}
+
+.negative {
+  background: #f5c6be;
+}
+
+.menu {
+  display: flex;
+  column-gap: var(--space);
+  list-style: none;
+  margin: var(--space) 0;
+  padding: 0;
+}
+
+/* Utilities */
+
+.text-align--left {
+  text-align: left;
+}
+.text-align--right {
+  text-align: right;
+}
+
+.justify-content--start {
+  justify-content: flex-start;
+}
+
+.justify-content--end {
+  justify-content: flex-end;
+}
+
+.margin--right {
+  margin-right: 40px;
+}
+
+.padding--right {
+  padding-right: 40px;
+}
+
+.margin--top {
+  margin-bottom: var(--space);
+}
+
+.margin--bottom {
+  margin-bottom: 55px;
+}

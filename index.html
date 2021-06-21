@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimise your layout for RTL languages</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="container">
+    <h1>
+      Optimise your layout for RTL languages
+    </h1>
+    <button id="ltrButton">LTR</button>
+    <button id="rtlButton">RTL</button>
+    <nav>
+      <ul class="menu">
+        <li><a class="menu__item" href="#section-alignment">Alignment</a></li>
+        <li><a class="menu__item" href="#section-margins">Margin / Padding</a></li>
+        <li><a class="menu__item" href="#section-columns">Columns</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="section">
+      <h2>Usage</h2>
+      <p>Set <strong>dir</strong> attribute in HTML tag to display proper layout direction. </p>
+      <pre><code>
+&lt;html dir="rtl" lang="en"&gt;&lt;/html&gt;
+    </code></pre>
+      <p> The browser will show a proper layout if you follow the best practices for directional layout building. Try
+        the buttons on header to test.</p>
+      <h3>Best practices</h3>
+      <div class="grid-2">
+        <div>
+          <h4>Don't</h4>
+          <ul>
+            <li>Bootstrap column system or similar based in floats</li>
+            <li>Horizonal padding/margin for spacing purposes</li>
+            <li>Text alignment based on right/left</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Do</h3>
+          <ul>
+            <li>Grid/flex containers for layouts</li>
+            <li>Use gap for spaces between elements</li>
+            <li>Use flex aligment instead of text alignment</li>
+          </ul>
+        </div>
+      </div>
+      <h4>Well, I can't refactor the layout right now:</h4>
+      <p>Here an example of how to modify your directional classes. Take into account that what is <strong>left</strong>
+        must be converted to <strong>right</strong> and vice versa in RTL direction so we can create conditional classes using the
+        cascade:</p>
+      <pre class="grid-2"><code>
+html[dir="rtl"] {
+  .text-align-left {
+    text-align: right;
+  }
+}
+      </code>
+    <code>
+.my-component {
+  margin-right: 24px;
+
+  html[dir="rtl"] &{
+    margin-right: initial;
+    margin-left: 24px;
+  }
+    </code></pre>
+    </section>
+    <h2>Issue points</h2>
+    <section class="section" id="section-alignment">
+      <h3>Alignment</h3>
+      <div class="grid-2 gap">
+        <div class="">
+          <h4>Tradicional alignment</h4>
+          <p>text-align: left;</p>
+          <p>text-align: right;</p>
+          <div class="column negative">
+            <div class="box text-align--left">Align left</div>
+            <div class="box text-align--right">Align right</div>
+          </div>
+        </div>
+        <div class="">
+          <h4>Flex container</h4>
+          <p>justify-content: flex-start</p>
+          <p>justify-content: flex-end</p>
+          <div class="column positive">
+            <div class="box flex justify-content--start">Flex start</div>
+            <div class="box flex justify-content--end">Flex end</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <h3 id="section-margins">Margin/Padding rigth / left for horizontal spacing</h3>
+    <section class="section grid-2 gap">
+      <div class="">
+        <h4>Margin right/left</h4>
+        <p>margin-right: 40px</p>
+        <div class="flex">
+          <div class="box negative margin--right d-inline">Margin-right</div>
+          <div class="box negative margin--right d-inline">Margin-right</div>
+        </div>
+      </div>
+      <div class="margin--top">
+        <h4>Column gap</h4>
+        <p>column-gap: 40px</p>
+        <div class="flex gap-40">
+          <div class="box positive">Column gap</div>
+          <div class="box positive">Column gap</div>
+        </div>
+      </div>
+    </section>
+    <h3 id="section-paddings">Padding rigth / left</h3>
+    <section class="section grid-2 gap">
+      <div class="">
+        <h4>padding right/left</h4>
+        <p>padding-right: 40px</p>
+        <div class="box negative padding--right col-6">Padding-right</div>
+        <div class="box negative padding--right col-6">Padding-right</div>
+      </div>
+      <div class="margin--top">
+        <h4 class="margin--bottom">Avoid horizontal padding only in one side.</h4>
+        <div class="flex">
+          <div class="box positive">Item</div>
+          <div class="box positive">Item</div>
+        </div>
+      </div>
+    </section>
+    <h3 id="section-columns">Column system</h3>
+    <section class="section grid-2 gap">
+      <div class="">
+        <h4>Bootstrap cols</h4>
+        <p class="">col-6 col-6. Based in floats</p>
+        <div class="box negative col-6">Col 1</div>
+        <div class="box negative col-6">Col 2</div>
+      </div>
+      <div class="margin--top">
+        <h4>Grid layout</h4>
+        <p>grid-2</p>
+        <div class="grid-2">
+          <div class="box positive">Grid item 1</div>
+          <div class="box positive">Grid item 2</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><a href="https://github.com/nabaroa/">With ♡ by nabaroa</a></footer>
+  <script src=" main.js"></script>
+</body>
+
+</html>

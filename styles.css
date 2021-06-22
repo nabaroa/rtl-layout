@@ -202,8 +202,20 @@ a {
   margin-right: 40px;
 }
 
+.margin-inline-end {
+  margin-inline-end: 40px;
+}
+
 .padding--right {
   padding-right: 40px;
+}
+
+.padding--left {
+  padding-left: 40px;
+}
+
+.padding-inline-start {
+  padding-inline-start: 40px;
 }
 
 .margin--top {

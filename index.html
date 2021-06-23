@@ -41,7 +41,7 @@
           <ul>
             <li>Bootstrap column system or similar based in floats</li>
             <li>Horizonal padding/margin for spacing purposes</li>
-            <li>Text alignment based on right/left</li>
+            <li>Text alignment based on left/right</li>
           </ul>
         </div>
         <div>
@@ -49,7 +49,7 @@
           <ul>
             <li>Grid/flex containers for layouts</li>
             <li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties#properties_for_margins_borders_and_padding"> logic properties</a> for spacing: margin-inline-start, margin-inline-start, padding-inline-start, padding-inline-end</li>
-            <li>Use flex aligment instead of text alignment</li>
+            <li>Text alignment based on start/end</li>
           </ul>
         </div>
       </div>
@@ -89,12 +89,12 @@ html[dir="rtl"] {
           </div>
         </div>
         <div class="">
-          <h4>Flex container</h4>
-          <p>justify-content: flex-start</p>
-          <p>justify-content: flex-end</p>
+          <h4>Logical values</h4>
+          <p>text-align: start;</p>
+          <p>text-align: end;</p>
           <div class="column positive">
-            <div class="box flex justify-content--start">Flex start</div>
-            <div class="box flex justify-content--end">Flex end</div>
+            <div class="box text-align--start">Align start</div>
+            <div class="box text-align--end">Align end</div>
           </div>
         </div>
       </div>

@@ -186,8 +186,17 @@ a {
 .text-align--left {
   text-align: left;
 }
+
+.text-align--start {
+  text-align: start;
+}
+
 .text-align--right {
   text-align: right;
+}
+
+.text-align--end {
+  text-align: end;
 }
 
 .justify-content--start {
